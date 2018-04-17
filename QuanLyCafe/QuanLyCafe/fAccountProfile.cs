@@ -24,10 +24,15 @@ namespace QuanLyCafe
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void txt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fAccountProfile_Load(object sender, EventArgs e)
         {
 
         }
