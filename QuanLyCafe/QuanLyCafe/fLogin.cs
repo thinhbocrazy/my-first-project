@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyCafe.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -34,10 +35,39 @@ namespace QuanLyCafe
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            fTableManager f = new fTableManager();
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
+            string username = txbUser.Text;
+
+            string password = txbPassword.Text;
+
+            if (Login(username, password))
+            {
+
+                fTableManager f = new fTableManager();
+
+                this.Hide();
+
+                f.ShowDialog();
+
+                this.Show();
+            }
+            else
+            {
+                MessageBox.Show("Sai tên tài khoản hoặc mật khẩu !");
+            }
+        }
+        bool Login(string username, string password)
+        {
+
+            return AccountDAO.Instance.Login(username, password);
+        }
+        private void fLogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
