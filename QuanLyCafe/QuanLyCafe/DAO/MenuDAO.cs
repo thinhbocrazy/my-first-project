@@ -1,16 +1,17 @@
-﻿using System;
+﻿
+using QuanLyCafe.DAO;
+using QuanLyCafe.DTO;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
-namespace QuanLyCafe.DAO
+namespace QuanLyQuanCafe.DAO
 {
     class MenuDAO
     {
-
         private static MenuDAO instance;
 
         internal static MenuDAO Instance
@@ -31,14 +32,14 @@ namespace QuanLyCafe.DAO
         {
             List<Menu> listMenu = new List<Menu>();
 
-            string query = "SELECT f.name,bi.count,f.price,f.price* bi.count AS totalPrice FROM dbo.BillInfo AS bi,dbo.Bill AS b,dbo.Food AS f WHERE bi.idBill = b.id AND bi.idFood = f.id AND b.idTable = " + id;
+            string query = "SELECT f.name,bi.count,f.price,f.price* bi.count AS totalPrice FROM dbo.BillInfo AS bi,dbo.Bill AS b,dbo.Food AS f WHERE bi.idBill = b.id AND bi.idFood = f.id AND b.status = 0 AND b.idTable = " + id;
 
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
 
             foreach (DataRow item in data.Rows)
             {
-                //Menu menu = new Menu(item);
-                //listMenu.Add(menu);
+                Menu menu = new Menu(item);
+                listMenu.Add(menu);
             }
 
             return listMenu;
