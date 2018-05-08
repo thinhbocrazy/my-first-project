@@ -26,6 +26,18 @@ namespace QuanLyCafe.DAO
         private BillDAO() { }
 
 
+
+
+        public void CheckOut(int id, int discount)
+        {
+
+            string query = "UPDATE Bill SET status = 1, " + "discount = " + discount + " WHERE id = " + id;
+
+            DataProvider.Instance.ExecuteNonQuery(query);
+
+        }
+
+
         // Thành công : bill ID
         // Thất bại : - 1
         public int GetUncheckBillIDByTableID(int id)
