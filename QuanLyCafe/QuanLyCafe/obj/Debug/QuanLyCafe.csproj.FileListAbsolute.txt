@@ -47,3 +47,6 @@ D:\GitHubDataTien\my-first-project\QuanLyCafe\QuanLyCafe\obj\Debug\QuanLyCafe.cs
 D:\GitHubDataTien\my-first-project\QuanLyCafe\QuanLyCafe\obj\Debug\QuanLyCafe.exe
 D:\GitHubDataTien\my-first-project\QuanLyCafe\QuanLyCafe\obj\Debug\QuanLyCafe.pdb
 D:\GithubData\my-first-project\QuanLyCafe\QuanLyCafe\obj\Debug\QuanLyCafe.csprojAssemblyReference.cache
+D:\GitHub data\my-first-project\QuanLyCafe\QuanLyCafe\obj\Debug\QuanLyCafe.fAccountProfile.resources
+D:\GitHub data\my-first-project\QuanLyCafe\QuanLyCafe\obj\Debug\QuanLyCafe.fAdmin.resources
+D:\GitHub data\my-first-project\QuanLyCafe\QuanLyCafe\obj\Debug\QuanLyCafe.fTableManager.resources
