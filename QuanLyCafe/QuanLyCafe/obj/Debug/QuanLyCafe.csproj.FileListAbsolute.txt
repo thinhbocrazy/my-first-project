@@ -21,3 +21,15 @@ D:\GitHub\my-first-project\QuanLyCafe\QuanLyCafe\obj\Debug\QuanLyCafe.csproj.Cor
 D:\GitHub\my-first-project\QuanLyCafe\QuanLyCafe\obj\Debug\QuanLyCafe.exe
 D:\GitHub\my-first-project\QuanLyCafe\QuanLyCafe\obj\Debug\QuanLyCafe.pdb
 D:\GitHub\my-first-project\QuanLyCafe\QuanLyCafe\obj\Debug\QuanLyCafe.fAdmin.resources
+D:\GithubData\my-first-project\QuanLyCafe\QuanLyCafe\bin\Debug\QuanLyCafe.exe.config
+D:\GithubData\my-first-project\QuanLyCafe\QuanLyCafe\bin\Debug\QuanLyCafe.exe
+D:\GithubData\my-first-project\QuanLyCafe\QuanLyCafe\bin\Debug\QuanLyCafe.pdb
+D:\GithubData\my-first-project\QuanLyCafe\QuanLyCafe\obj\Debug\QuanLyCafe.fAccountProfile.resources
+D:\GithubData\my-first-project\QuanLyCafe\QuanLyCafe\obj\Debug\QuanLyCafe.fAdmin.resources
+D:\GithubData\my-first-project\QuanLyCafe\QuanLyCafe\obj\Debug\QuanLyCafe.fLogin.resources
+D:\GithubData\my-first-project\QuanLyCafe\QuanLyCafe\obj\Debug\QuanLyCafe.fTableManager.resources
+D:\GithubData\my-first-project\QuanLyCafe\QuanLyCafe\obj\Debug\QuanLyCafe.Properties.Resources.resources
+D:\GithubData\my-first-project\QuanLyCafe\QuanLyCafe\obj\Debug\QuanLyCafe.csproj.GenerateResource.cache
+D:\GithubData\my-first-project\QuanLyCafe\QuanLyCafe\obj\Debug\QuanLyCafe.csproj.CoreCompileInputs.cache
+D:\GithubData\my-first-project\QuanLyCafe\QuanLyCafe\obj\Debug\QuanLyCafe.exe
+D:\GithubData\my-first-project\QuanLyCafe\QuanLyCafe\obj\Debug\QuanLyCafe.pdb
