@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace QuanLyCafe.DTO
 {
-    class Food
+    public class Food
     {
         public Food(int id, string name, int categoryID, float price)
         {

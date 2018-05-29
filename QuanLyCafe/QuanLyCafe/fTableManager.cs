@@ -22,6 +22,36 @@ namespace QuanLyCafe
             InitializeComponent();
 
             LoadTable();
+
+            LoadCategory();
+
+            LoadComboboxTable(cbSwitchTable);
+        }
+
+
+        void LoadFoodListByCategoryID(int id)
+        {
+
+            List<Food> listFood = FoodDAO.Instance.GetFoodCategoryID(id);
+
+            cbFood.DataSource = listFood;
+
+            cbFood.DisplayMember = "Name";
+
+        }
+
+        void LoadComboboxTable(ComboBox cb)
+        {
+            cb.DataSource = TableDAO.Instance.LoadTableList();
+            cb.DisplayMember = "Name";
+        }
+
+        void LoadCategory()
+        {
+            List<Category> listCategory = CategoryDAO.Instance.GetListCategory();
+            cbCategory.DataSource = listCategory;
+
+            cbCategory.DisplayMember = "Name";
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
@@ -39,6 +69,7 @@ namespace QuanLyCafe
         private void adminToolStripMenuItem_Click(object sender, EventArgs e)
         {
             fAdmin f = new fAdmin();
+
 
             f.ShowDialog();
         }
@@ -78,8 +109,11 @@ namespace QuanLyCafe
                 flpTable.Controls.Add(btn);
             }
 
+            
 
         }
+
+        
 
         private void btn_Click(object sender, EventArgs e)
         {
@@ -177,6 +211,65 @@ namespace QuanLyCafe
                     LoadTable();
                 }
             }
+        }
+
+        private void btnSwitchTable_Click(object sender, EventArgs e)
+        {
+
+            int id1 = (lsvBill.Tag as Table).ID;
+
+            int id2 = (cbSwitchTable.SelectedItem as Table).ID;
+
+            if (MessageBox.Show(string.Format("Bạn có thật sự muốn chuyển bàn {0} qua bàn {1}", (lsvBill.Tag as Table).Name, (cbSwitchTable.SelectedItem as Table).Name), "Thông báo!", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+            {
+                TableDAO.Instance.SwitchTable(id1, id2);
+
+                LoadTable();
+            }
+
+
+        }
+
+        private void f_UpdateFood(object sender, EventArgs e)
+        {
+            LoadFoodListByCategoryID((cbCategory.SelectedItem as Category).ID);
+
+            if (lsvBill.Tag != null)
+                ShowBill((lsvBill.Tag as Table).ID);
+
+        }
+
+        private void f_DeleteFood(object sender, EventArgs e)
+        {
+            LoadFoodListByCategoryID((cbCategory.SelectedItem as Category).ID);
+
+            ShowBill((lsvBill.Tag as Table).ID);
+
+            LoadTable();
+        }
+
+        private void f_InsertFood(object sender, EventArgs e)
+        {
+            LoadFoodListByCategoryID((cbCategory.SelectedItem as Category).ID);
+
+            if (lsvBill.Tag != null)
+                ShowBill((lsvBill.Tag as Table).ID);
+        }
+
+        private void cbCategory_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            int id = 0;
+
+            ComboBox cb = sender as ComboBox;
+
+            if (cb.SelectedItem == null)
+                return;
+
+            Category selected = cb.SelectedItem as Category;
+
+            id = selected.ID;
+
+            LoadFoodListByCategoryID(id);
         }
     }
 }

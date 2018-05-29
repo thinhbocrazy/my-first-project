@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace QuanLyCafe.DAO
 {
-    class BillInfoDAO
+    public class BillInfoDAO
     {
         private static BillInfoDAO instance;
 
@@ -46,6 +46,13 @@ namespace QuanLyCafe.DAO
         {
 
             DataProvider.Instance.ExecuteNonQuery("USP_InsertBillInfo @idBill , @idFood , @count ", new object[] { idBill, idFood, count });
+        }
+
+        public void DeleteBillInfoByFoodID(int id)
+        {
+
+            DataTable data = DataProvider.Instance.ExecuteQuery("DELETE dbo.BillInfo WHERE idFood = " + id);
+
         }
     }
 }
