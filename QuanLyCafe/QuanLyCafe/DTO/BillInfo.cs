@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace QuanLyCafe.DTO
 {
-    class BillInfo
+    public class BillInfo
     {
         public BillInfo(int id, int billID, int foodID, int count)
         {
