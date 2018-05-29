@@ -46,3 +46,4 @@ D:\GitHubDataTien\my-first-project\QuanLyCafe\QuanLyCafe\obj\Debug\QuanLyCafe.cs
 D:\GitHubDataTien\my-first-project\QuanLyCafe\QuanLyCafe\obj\Debug\QuanLyCafe.csproj.CoreCompileInputs.cache
 D:\GitHubDataTien\my-first-project\QuanLyCafe\QuanLyCafe\obj\Debug\QuanLyCafe.exe
 D:\GitHubDataTien\my-first-project\QuanLyCafe\QuanLyCafe\obj\Debug\QuanLyCafe.pdb
+D:\GithubData\my-first-project\QuanLyCafe\QuanLyCafe\obj\Debug\QuanLyCafe.csprojAssemblyReference.cache
