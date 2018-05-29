@@ -73,5 +73,10 @@ namespace QuanLyCafe.DAO
 
 
         }
+
+        public DataTable GetBillListByDate(DateTime checkIn, DateTime checkOut)
+        {
+            return DataProvider.Instance.ExecuteQuery("EXEC USP_GetListBillByDate @checkIn , @checkOut", new object[] { checkIn, checkOut });
+        }
     }
 }
